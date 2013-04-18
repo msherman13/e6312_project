@@ -10,6 +10,10 @@
 \usepackage{hyperref}
 %\usepackage{breakurl}
 %\usepackage{epstopdf}
+\usepackage[thinspace,thinqspace,amssymb,binary]{SIunits}
+\usepackage{tabularx}
+
+
 \begin{document}
 
 \title{EE6312 Advanced Analog ICs - Final Project: System Level Design}
@@ -18,11 +22,13 @@
 \maketitle
 
 \section{Design Specifications}
-We are designing a system for $10bit$ resolution and $5K samples/s$.
+We are designing a system for $10 bit$ resolution and $5K samples/s$.
 
 \section{Voltage Choices}
 \subsection{Full-Scale and Least Significant Bit Voltages}
-Explain decisions.
+To calculate the $V_{FS}$, we made the assumption that we will need at the most two overdrive voltages of headroom and two overdrive voltages to the floor. We made this assumption because we are not yet sure of our OTA topology and we did not want to limit ourselves to single stack output biasing circuitry. 
+
+To calculate $V_{LSB}$, we simply found the total number of quantization levels ($2^{10}$) and found the difference between each level based on the $V_{FS}$ at the output.
 
 \subsection{Common-Mode Voltage}
 Explain decisions.
@@ -33,10 +39,28 @@ Explain decisions.
 
 
 
-%\clearpage
-%\section{MATLAB Code}
-%Most of the calculations were performed using the following MATLAB Code.
-%\lstinputlisting{homework3.m}
+
+\section{Figures \& Tables}
+
+\begin{table}[h]
+\centering
+\newcolumntype{R}{>{\centering\arraybackslash}X}
+\begin{tabularx}{500pt}{|R|R|}
+\hline
+\textbf{Parameter}&\textbf{Required Value}\\ \hline
+Sample Rate&$5K samples/s$\\ \hline
+Resolution&$10bit$\\ \hline
+$V_{FS}$&$1.0V$ at the output, $0.25V$ at the input\\ \hline
+$V_{LSB}$& $977\mu V$\\ \hline
+\end{tabularx}
+\caption{Specifications for the System Level Components and OTA}
+\label{b11_errors}
+\end{table}
+
+\clearpage
+\section{MATLAB Code}
+Most of the calculations were performed using the following MATLAB Code.
+\lstinputlisting{homework3.m}
 
 
 \end{document}
