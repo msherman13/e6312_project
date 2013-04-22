@@ -10,6 +10,10 @@
 \usepackage{hyperref}
 %\usepackage{breakurl}
 %\usepackage{epstopdf}
+\usepackage[thinspace,thinqspace,amssymb,binary]{SIunits}
+\usepackage{tabularx}
+
+
 \begin{document}
 
 \title{EE6312 Advanced Analog ICs - Final Project: System Level Design}
@@ -18,25 +22,137 @@
 \maketitle
 
 \section{Design Specifications}
-We are designing a system for $10bit$ resolution and $5K samples/s$.
+We are designing a system for $10 bit$ resolution and $5K samples/s$.
 
 \section{Voltage Choices}
 \subsection{Full-Scale and Least Significant Bit Voltages}
-Explain decisions.
+To calculate the $V_{FS}$, we made the assumption that we will need at the most two overdrive voltages of headroom and two overdrive voltages to the floor. We made this assumption because we are not yet sure of our OTA topology and we did not want to limit ourselves to single stack output biasing circuitry. 
+
+To calculate $V_{LSB}$, we simply found the total number of quantization levels ($2^{10}$) and found the difference between each level based on the $V_{FS}$ at the output.
 
 \subsection{Common-Mode Voltage}
-Explain decisions.
+We chose our $V_{CM}$ to be half the supply voltage of $1.8V$.
 
 \section{Switched-Capacitor Input Stage}
+\subsection{Capacitor Sizing}
+We used the below expressions to calculate our $C_{min}$ value. This limit is based on the noise specification of the system. Based on our value for $C_{min}$, we chose a reasonable value for $C_{hold}$ and $C_{sample}$.
+
+\begin{equation}
+C_{min} = kT/\overline{V_{RMS}^{2}}
+\end{equation}
+where $\overline{V_{RMS}^{2}} = \frac{kT}{C}$ = $\frac{V_{LSB}^{2}}{24}$.
+
+\subsection{Transfer Function}
+At the beginning of the sample phase, the charge at the summing node is given by the below expression.
+
+\begin{equation}
+Q_{samp+} = 4C\left(V_{in+}-V_{CM}\right)
+\end{equation}
+
+\begin{equation}
+Q_{samp-} = 4C\left(V_{in-}-V_{CM}\right)
+\end{equation}
+
+Then, during the hold phase, all of the charge will go onto the hold capacitor because the OTA forces the summing node to $V_{CM}$ while the other other sides of the caps are brought to $V_{CM}$ as well by the ideal source and closed hold switches.
+
+\begin{equation}
+Q_{hold+} = C\left(V_{out+}-V_{CM}\right)
+\end{equation}
+
+\begin{equation}
+Q_{hold-} = C\left(V_{out-}-V_{CM}\right)
+\end{equation}
+
+Using the law of charge conservation, we can equate the hold and sample phase capacitor charges.
+
+\begin{equation}
+Q_{hold+} = Q_{samp+}
+\end{equation}
+
+\begin{equation}
+\left(V_{out+}-V_{CM}\right) = 4\left(V_{in+}-V_{CM}\right)
+\end{equation}
+
+\begin{equation}
+Q_{hold-} = Q_{samp-}
+\end{equation}
+
+\begin{equation}
+\left(V_{out-}-V_{CM}\right) = 4\left(V_{in-}-V_{CM}\right)
+\end{equation}
+
+Subtracting the two expressions, we get a transfer function of the differential input and output voltages.
+
+\begin{equation}
+\left(V_{out+}-V_{out-}\right) = 4\left(V_{in+}-V_{in-}\right)
+\end{equation}
+
+\subsection{Maximum Resistance}
+To find the maximum resistance we could tolerate, we first found the minimum frequency of the non-dominant pole (caused by RC feedback network). To do this, we first estimated the unity gain frequency of our system using $f_{unity} = \frac{g_m}{2\pi C_{hold}}$. Using this value, we estimated the non-dominant pole location by scaling $f_{unity}$ up by a factor of $1.7$ to achieve the phase margin we chose (see Table \ref{specs}). Using the below expression we then found the maximum value of resistance.
+
+\begin{equation}
+R_{max} = \frac{1}{2 \pi f_{p2}C}
+\end{equation}
+
+\subsection{MOSFET Sizing}
+We decided to use complimentary pass transistor switches and to size the pMOS and nMOS the same. The reason for this is that the charge injection is cancelled between the devices and we can recover the delay cause by the PMOS by increasing the pMOS and nMOS widths together. Note that we used minimum length devices because this has a positive effect on both speed and accuracy. With our $R_{max}$ value, we were able to calculate the necessary $\frac{W}{L}$ ratios using the below expression derived from the parallel combination of $R_{on-p}$ and $R_{on-n}$.
+
+\begin{equation}
+R_{max} = \frac{1}{(\mu_n + \mu_p) C_{ox} \frac{W}{L} (V_{CM} - V_{in} - V_T)}
+\end{equation}
 
 \section{OTA Parameters}
+\subsection{DC-Gain}
+Using the settling constraint and the below expression, we determined a necessary value of the OTA's open-loop gain.
 
+\begin{equation}
+\frac{V_{error}}{V_{in}} = \frac{1}{A_{DC}\beta}
+\end{equation}
 
+\subsection{Bandwidth}
+Using the above gain and the unity gain frequency, we were able to calculate a value for our open loop $f_{3dB}$.
 
-%\clearpage
-%\section{MATLAB Code}
-%Most of the calculations were performed using the following MATLAB Code.
-%\lstinputlisting{homework3.m}
+\subsection{Phase Margin}
+We chose a minimum phase margin of $60^o$.
+
+\subsection{Slewing}
+We found the slew rate by taking the maximum slope of a sine wave at $f_{3dB}$. From this value, we were able to use the below expression to calculate the minimum value of $I_{slew}$.
+
+\begin{equation}
+Slew Rate = \frac{I_{slew}}{C_{hold}}
+\end{equation}
+
+\section{Figures \& Tables}
+
+\begin{table}[h]
+\centering
+\newcolumntype{R}{>{\centering\arraybackslash}X}
+\begin{tabularx}{500pt}{|R|R|}
+\hline
+\textbf{Parameter}&\textbf{Required Value}\\ \hline
+Sample Rate&$5K samples/s$\\ \hline
+Resolution&$10bit$\\ \hline
+$V_{FS}$&$1.0V$ at the output, $0.25V$ at the input\\ \hline
+$V_{LSB}$&$977\mu V$\\ \hline
+$V_{DD}$&$1.8V$\\ \hline
+$V_{CM}$&$0.9V$\\ \hline
+$C_{min}$&$104fF$\\ \hline
+$C_{hold}$ \& $C_{sample}$&$110fF$\\ \hline
+Phase Margin&$60^o$\\ \hline
+$f_{unity}$&$1.44GHz$\\ \hline
+$R_{max}$&$588 \Omega$\\ \hline
+$\frac{W}{L}_n$ \& $\frac{W}{L}_p$&10.34\\ \hline
+$A_{DC}$&$84.29dB$\\ \hline
+$f_{3dB}$&$1.44GHz$\\ \hline
+\end{tabularx}
+\caption{Specifications for the System Level Components and OTA}
+\label{specs}
+\end{table}
+
+\clearpage
+\section{MATLAB Code}
+Most of the calculations were performed using the following MATLAB Code.
+\lstinputlisting{capacitorSizing.m}
 
 
 \end{document}

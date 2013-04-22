@@ -1,0 +1,16 @@
+\BOOKMARK [1][-]{section.1}{Design Specifications}{}% 1
+\BOOKMARK [1][-]{section.2}{Voltage Choices}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Full-Scale and Least Significant Bit Voltages}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Common-Mode Voltage}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Switched-Capacitor Input Stage}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{Capacitor Sizing}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Transfer Function}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.3}{Maximum Resistance}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.4}{MOSFET Sizing}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{OTA Parameters}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{DC-Gain}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Bandwidth}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.3}{Phase Margin}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.4}{Slewing}{section.4}% 14
+\BOOKMARK [1][-]{section.5}{Figures \046 Tables}{}% 15
+\BOOKMARK [1][-]{section.6}{MATLAB Code}{}% 16
