@@ -35,7 +35,7 @@ We chose our $V_{CM}$ to be half the supply voltage of $1.8V$.
 
 \section{Switched-Capacitor Input Stage}
 \subsection{Capacitor Sizing}
-We used the below expressions to calculate our $C_{min}$ value. This limit is based on the noise specification of the system. Based on our value for $C_{min}$, we chose a reasonable value for $C_{hold}$ and $C_{sample}$.
+We used the below expressions to calculate our $C_{min}$ value. Since there are four capacitors in parallel, when doing noise analysis we can consider them as 1 capacitor of value $4C_{samp}$. This limit is based on the noise specification of the system. Based on our value for $C_{min}$, we chose a reasonable value for $C_{hold}$ and $C_{sample}$.
 
 \begin{equation}
 C_{min} = kT/\overline{V_{RMS}^{2}}
