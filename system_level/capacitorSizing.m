@@ -7,11 +7,11 @@ close all
 
 N = 10; % Numbers of bits we are using;
 V_DD = 1.8;%V
-V_ov = .2; %V Basic asumption 
+V_ov = .225; %V Basic asumption 
 
 V_cm = V_DD/2;
 
-V_FS = (V_DD -(2*V_ov) - (2*V_ov)); % Take off 2 V_ov for 
+V_FS = (V_DD -(V_ov) - (V_ov)); % Take off 2 V_ov for 
     % output swing at both the top and bottom. Divide by ideal gain for
     % input V_FS.
 %V_FS = 1;
@@ -23,8 +23,9 @@ V_N_RMS_squared_max = V_LSB^2/24;
 k = 1.3806488e-23;
 T = 300;%K
  
-C_min = k*T/V_N_RMS_squared_max;
- 
+C_equiv_min = k*T/V_N_RMS_squared_max;
+C_min = C_equiv_min/4;
+
  % Settling Constraints
 settle_voltage_error = V_LSB/4;
 percent_error = 1-(4*V_FS - settle_voltage_error)/(4*V_FS);
@@ -36,7 +37,7 @@ tau = (T_s/2)/t_over_tau;
 f_3db = 1/(2*pi*tau);
 
  % From calculate C_min 
- C = 110e-15;
+ C = 15e-15;
  R_max = tau/C;
  
  % Info on transistors
@@ -85,10 +86,11 @@ f_3db = 1/(2*pi*tau);
  f_3dB_pole = f_unity/(DC_gain_miles);
  w_3dB_pole = 2*pi*f_3dB_pole;
  
- slew_rate = 4*V_FS*w_3dB_pole;
+ slew_rate = V_FS*w_3dB_pole;
  I_slew = slew_rate*C;
  
  %Redo Switch Sizing
  R_max2 = 1/(w_p2*C);
  
  W_over_L_min = 1/(R_max2*(beta_n+beta_p)*V_ov_n);
+ 
