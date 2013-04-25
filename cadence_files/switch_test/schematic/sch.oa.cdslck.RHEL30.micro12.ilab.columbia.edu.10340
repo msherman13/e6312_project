@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      ms4543
+HostName                       micro12.ilab.columbia.edu
+ProcessIdentifier              10340
+ProcessCreationTime_UTC        1366572169
+ProcessCreationTime_Readable   Sun Apr 21 15:22:49 2013 EDT
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/user4/spring13/ms4543/Cadence/e6312_project/switch_test/schematic/sch.oa.cdslck
+TimeEditLocked                 Sun Apr 21 18:40:34 2013 EDT
