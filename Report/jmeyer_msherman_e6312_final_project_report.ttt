@@ -1,0 +1,54 @@
+\begin{table}
+\centering
+\caption{Passive Component Values}
+\label{tab:passive_elements}
+\begin{tabular}{|c|c|}
+\hline Component & Value \\
+\hline Resistors & $\Omega$ \\
+\hline  &  \\
+\hline Capacitors & $F$ \\
+\hline  &  \\
+\hline  &  \\
+\hline  &  \\
+\hline
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
+\begin{table}
+\centering
+\caption{Transistor Sizings}
+\label{tab:trans_sizes}
+\begin{tabular}{|c|c|c|c|}
+\hline Transistor & Width (m) & Length (m) & Aspect Ratio \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
+\begin{table}
+\centering
+\caption{Summary of Specifications and Results}
+\label{tab:specs_results}
+\begin{tabular}{|c|c|c|c|c|}
+\hline Specification & Specification Value & FF Result & TT Result & SS Result\\
+\hline Open Loop OTA DC Gain &  & &  & \\
+\hline Open Loop OTA Phase Margin &  & &  & \\
+\hline Open Loop OTA $3dB$ Bandwidth &  & &  & \\
+\hline Open Loop OTA Unity Gain Bandwidth &  & &  & \\
+\hline Overall Power Consumption &  & &  & \\
+\hline Overall Figure of Merit &  & &  & \\
+\hline Overall Area &  & &  & \\
+\hline  &  & &  & \\
+\hline
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
