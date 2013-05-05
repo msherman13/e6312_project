@@ -7,7 +7,7 @@ close all
 
 N = 10; % Numbers of bits we are using;
 V_DD = 1.8;%V
-V_ov = .225; %V Basic asumption 
+V_ov = .115; %V Basic asumption 
 
 V_cm = V_DD/2;
 
@@ -86,11 +86,27 @@ f_3db = 1/(2*pi*tau);
  f_3dB_pole = f_unity/(DC_gain_miles);
  w_3dB_pole = 2*pi*f_3dB_pole;
  
- slew_rate = V_FS*w_3dB_pole;
- I_slew = slew_rate*C;
+ %slew_rate = V_FS*w_3dB_pole;
+ %I_slew = slew_rate*C;
  
  %Redo Switch Sizing
  R_max2 = 1/(w_p2*C);
  
  W_over_L_min = 1/(R_max2*(beta_n+beta_p)*V_ov_n);
+ 
+ % Slewing Calculations
+ max_delta_V = 2*V_FS;
+ delta_t = 1/(2*f_s);
+ 
+ slew_rate = max_delta_V/delta_t;
+ 
+ I_min = slew_rate*C;
+ 
+ % Choose 
+ n = 1.5;
+ phi_t = 0.0258;
+ I_choose = 10e-9;
+ g_m = I_choose/(n*phi_t);
+ 
+R_out_1 = sqrt(DC_gain_miles/g_m^2);
  

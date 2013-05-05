@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.6.20)  3 MAY 2013 18:04
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.6.20)  5 MAY 2013 17:40
 entering extended mode
 **jmeyer_msherman_e6312_final_project_report.tex
 
@@ -131,6 +131,54 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen117
 \Gin@req@width=\dimen118
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
 (C:\Users\jmeyer\AppData\Roaming\MiKTeX\2.9\tex\latex\endfloat\endfloat.sty
 Package: endfloat 2011/12/25 v2.5d LaTeX2e package puts figures and tables at e
 nd (jdm)
@@ -169,10 +217,17 @@ LaTeX Font Info:    ... okay on input line 18.
 \MPnumerator=\count100
 \makeMPintoPDFobject=\count101
 \everyMPtoPDFconversion=\toks17
-) (jmeyer_msherman_e6312_final_project_report.ttt)
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 32.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 32.
+ (jmeyer_msherman_e6312_final_project_report.ttt)
+(jmeyer_msherman_e6312_final_project_report.fff)
 AED endfloat: Processing end Figures and Tables [1{C:/Users/jmeyer/AppData/Loca
 l/MiKTeX/2.9/pdftex/config/pdftex.map}
-
 
 
 ]
@@ -180,35 +235,207 @@ l/MiKTeX/2.9/pdftex/config/pdftex.map}
 man_e6312_final_project_report.ttt
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
 ) [2
 
 
 ]
 (C:\Users\jmeyer\SkyDrive\Advanced_Analog_ICs\e6312_project\Report\jmeyer_msher
+man_e6312_final_project_report.fff
+Package epstopdf Info: Source file: <Plots/open_dm_gain.eps>
+(epstopdf)                    date: 2013-05-05 17:15:54
+(epstopdf)                    size: 35460 bytes
+(epstopdf)             Output file: <Plots/open_dm_gain-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-05-05 12:49:49
+(epstopdf)                    size: 18986 bytes
+(epstopdf)             Command: <epstopdf --outfile=Plots/open_dm_gain-eps-conv
+erted-to.pdf Plots/open_dm_gain.eps>
+(epstopdf)             \includegraphics on input line 3.
+runsystem(epstopdf --outfile=Plots/open_dm_gain-eps-converted-to.pdf Plots/open
+_dm_gain.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Plots/open_dm_gain-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-05-05 17:40:12
+(epstopdf)                    size: 18986 bytes.
+
+<Plots/open_dm_gain-eps-converted-to.pdf, id=16, 497.86pt x 400.49625pt>
+File: Plots/open_dm_gain-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Plots/open_dm_gain-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/open_dm_gain-eps-converted-to.pdf used on input 
+line 3.
+(pdftex.def)             Requested size: 289.07999pt x 232.55075pt.
+Package epstopdf Info: Source file: <Plots/open_dm_phase.eps>
+(epstopdf)                    date: 2013-05-05 17:15:55
+(epstopdf)                    size: 35245 bytes
+(epstopdf)             Output file: <Plots/open_dm_phase-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-05-05 12:49:51
+(epstopdf)                    size: 16359 bytes
+(epstopdf)             Command: <epstopdf --outfile=Plots/open_dm_phase-eps-con
+verted-to.pdf Plots/open_dm_phase.eps>
+(epstopdf)             \includegraphics on input line 11.
+runsystem(epstopdf --outfile=Plots/open_dm_phase-eps-converted-to.pdf Plots/ope
+n_dm_phase.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Plots/open_dm_phase-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-05-05 17:40:13
+(epstopdf)                    size: 16353 bytes.
+
+<Plots/open_dm_phase-eps-converted-to.pdf, id=17, 503.8825pt x 400.49625pt>
+File: Plots/open_dm_phase-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Plots/open_dm_phase-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/open_dm_phase-eps-converted-to.pdf used on input
+ line 11.
+(pdftex.def)             Requested size: 289.07999pt x 229.76411pt.
+Package epstopdf Info: Source file: <Plots/open_cm_gain.eps>
+(epstopdf)                    date: 2013-05-05 12:38:57
+(epstopdf)                    size: 35389 bytes
+(epstopdf)             Output file: <Plots/open_cm_gain-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-05-05 12:49:52
+(epstopdf)                    size: 11441 bytes
+(epstopdf)             Command: <epstopdf --outfile=Plots/open_cm_gain-eps-conv
+erted-to.pdf Plots/open_cm_gain.eps>
+(epstopdf)             \includegraphics on input line 19.
+Package epstopdf Info: Output file is already uptodate.
+
+<Plots/open_cm_gain-eps-converted-to.pdf, id=18, 497.86pt x 400.49625pt>
+File: Plots/open_cm_gain-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Plots/open_cm_gain-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/open_cm_gain-eps-converted-to.pdf used on input 
+line 19.
+(pdftex.def)             Requested size: 289.07999pt x 232.55075pt.
+Package epstopdf Info: Source file: <Plots/open_cm_phase.eps>
+(epstopdf)                    date: 2013-05-05 12:38:59
+(epstopdf)                    size: 35021 bytes
+(epstopdf)             Output file: <Plots/open_cm_phase-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-05-05 12:49:53
+(epstopdf)                    size: 12908 bytes
+(epstopdf)             Command: <epstopdf --outfile=Plots/open_cm_phase-eps-con
+verted-to.pdf Plots/open_cm_phase.eps>
+(epstopdf)             \includegraphics on input line 27.
+Package epstopdf Info: Output file is already uptodate.
+
+<Plots/open_cm_phase-eps-converted-to.pdf, id=19, 503.8825pt x 400.49625pt>
+File: Plots/open_cm_phase-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Plots/open_cm_phase-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/open_cm_phase-eps-converted-to.pdf used on input
+ line 27.
+(pdftex.def)             Requested size: 289.07999pt x 229.76411pt.
+Package epstopdf Info: Source file: <Plots/closed_sine.eps>
+(epstopdf)                    date: 2013-05-05 12:39:04
+(epstopdf)                    size: 22254 bytes
+(epstopdf)             Output file: <Plots/closed_sine-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-05-05 12:49:54
+(epstopdf)                    size: 11543 bytes
+(epstopdf)             Command: <epstopdf --outfile=Plots/closed_sine-eps-conve
+rted-to.pdf Plots/closed_sine.eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+
+<Plots/closed_sine-eps-converted-to.pdf, id=20, 500.87125pt x 397.485pt>
+File: Plots/closed_sine-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Plots/closed_sine-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/closed_sine-eps-converted-to.pdf used on input l
+ine 35.
+(pdftex.def)             Requested size: 289.07999pt x 229.4194pt.
+Package epstopdf Info: Source file: <Plots/closed_small_step.eps>
+(epstopdf)                    date: 2013-05-05 12:39:02
+(epstopdf)                    size: 27582 bytes
+(epstopdf)             Output file: <Plots/closed_small_step-eps-converted-to.p
+df>
+(epstopdf)                    date: 2013-05-05 12:49:56
+(epstopdf)                    size: 12634 bytes
+(epstopdf)             Command: <epstopdf --outfile=Plots/closed_small_step-eps
+-converted-to.pdf Plots/closed_small_step.eps>
+(epstopdf)             \includegraphics on input line 43.
+Package epstopdf Info: Output file is already uptodate.
+
+<Plots/closed_small_step-eps-converted-to.pdf, id=21, 511.9125pt x 397.485pt>
+File: Plots/closed_small_step-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Plots/closed_small_step-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/closed_small_step-eps-converted-to.pdf used on i
+nput line 43.
+(pdftex.def)             Requested size: 289.07999pt x 224.4642pt.
+Package epstopdf Info: Source file: <Plots/closed_large_step.eps>
+(epstopdf)                    date: 2013-05-05 12:39:12
+(epstopdf)                    size: 32668 bytes
+(epstopdf)             Output file: <Plots/closed_large_step-eps-converted-to.p
+df>
+(epstopdf)                    date: 2013-05-05 12:49:57
+(epstopdf)                    size: 16168 bytes
+(epstopdf)             Command: <epstopdf --outfile=Plots/closed_large_step-eps
+-converted-to.pdf Plots/closed_large_step.eps>
+(epstopdf)             \includegraphics on input line 51.
+Package epstopdf Info: Output file is already uptodate.
+
+<Plots/closed_large_step-eps-converted-to.pdf, id=22, 500.87125pt x 397.485pt>
+File: Plots/closed_large_step-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Plots/closed_large_step-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/closed_large_step-eps-converted-to.pdf used on i
+nput line 51.
+(pdftex.def)             Requested size: 289.07999pt x 229.4194pt.
+Package epstopdf Info: Source file: <Plots/closed_saw.eps>
+(epstopdf)                    date: 2013-05-05 12:39:08
+(epstopdf)                    size: 53487 bytes
+(epstopdf)             Output file: <Plots/closed_saw-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-05-05 12:49:58
+(epstopdf)                    size: 29357 bytes
+(epstopdf)             Command: <epstopdf --outfile=Plots/closed_saw-eps-conver
+ted-to.pdf Plots/closed_saw.eps>
+(epstopdf)             \includegraphics on input line 59.
+Package epstopdf Info: Output file is already uptodate.
+
+<Plots/closed_saw-eps-converted-to.pdf, id=23, 507.8975pt x 397.485pt>
+File: Plots/closed_saw-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Plots/closed_saw-eps-converted-to.pdf>
+Package pdftex.def Info: Plots/closed_saw-eps-converted-to.pdf used on input li
+ne 59.
+(pdftex.def)             Requested size: 289.07999pt x 226.24129pt.
+) [3
+
+ <C:/Users/jmeyer/SkyDrive/Advanced_Analog_ICs/e6312_project/Report/Plots/open_
+dm_gain-eps-converted-to.pdf> <C:/Users/jmeyer/SkyDrive/Advanced_Analog_ICs/e63
+12_project/Report/Plots/open_dm_phase-eps-converted-to.pdf>] [4 <C:/Users/jmeye
+r/SkyDrive/Advanced_Analog_ICs/e6312_project/Report/Plots/open_cm_gain-eps-conv
+erted-to.pdf> <C:/Users/jmeyer/SkyDrive/Advanced_Analog_ICs/e6312_project/Repor
+t/Plots/open_cm_phase-eps-converted-to.pdf>] [5 <C:/Users/jmeyer/SkyDrive/Advan
+ced_Analog_ICs/e6312_project/Report/Plots/closed_sine-eps-converted-to.pdf> <C:
+/Users/jmeyer/SkyDrive/Advanced_Analog_ICs/e6312_project/Report/Plots/closed_sm
+all_step-eps-converted-to.pdf>]
+[6 <C:/Users/jmeyer/SkyDrive/Advanced_Analog_ICs/e6312_project/Report/Plots/clo
+sed_large_step-eps-converted-to.pdf> <C:/Users/jmeyer/SkyDrive/Advanced_Analog_
+ICs/e6312_project/Report/Plots/closed_saw-eps-converted-to.pdf>]
+(C:\Users\jmeyer\SkyDrive\Advanced_Analog_ICs\e6312_project\Report\jmeyer_msher
 man_e6312_final_project_report.aux) ) 
 Here is how much of TeX's memory you used:
- 1981 strings out of 494045
- 31602 string characters out of 3148384
- 87247 words of memory out of 3000000
- 5298 multiletter control sequences out of 15000+200000
- 39777 words of font info for 74 fonts, out of 3000000 for 9000
+ 2401 strings out of 494045
+ 40092 string characters out of 3148384
+ 95991 words of memory out of 3000000
+ 5670 multiletter control sequences out of 15000+200000
+ 40689 words of font info for 77 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,8n,19p,306b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,23p,761b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
 ps/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on jmeyer_msherman_e6312_final_project_report.pdf (2 pages, 6652
-7 bytes).
+cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
+mes/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on jmeyer_msherman_e6312_final_project_report.pdf (6 pages, 2356
+43 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

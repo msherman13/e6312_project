@@ -20,7 +20,7 @@ m1 = (log10(g_m_over_i_meas(i_max_eff+1))-log10(g_m_over_i_meas(i_max_eff)))/...
 
 y1 = 10.^(m1*(log10(x)-log10(i_ds(i_max_eff))) + log10(g_m_over_i_meas(i_max_eff)) );
 
-offset = 4000;
+offset = 2000;
 
 m2 = (log10(g_m_over_i_meas(end)) - log10(g_m_over_i_meas(end-offset)))/...
     (log10(i_ds(end))-log10(i_ds(end-offset)));

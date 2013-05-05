@@ -1,0 +1,64 @@
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Plots/open_dm_gain.eps}
+\caption{The open loop differential gain magnitude response of the OTA.}
+\label{fig:open_dm_gain}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Plots/open_dm_phase.eps}
+\caption{The open loop differential gain phase response of the OTA.}
+\label{fig:open_dm_phase}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Plots/open_cm_gain.eps}
+\caption{The open loop common mode gain magnitude response of the OTA.}
+\label{fig:open_cm_gain}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Plots/open_cm_phase.eps}
+\caption{The open loop common mode gain phase response of the OTA.}
+\label{fig:open_cm_phase}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Plots/closed_sine.eps}
+\caption{The closed loop transient response to a full-scale amplitude sinusoid at the Nyquist frequency.}
+\label{fig:closed_sine}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Plots/closed_small_step.eps}
+\caption{The closed loop transient response to a small amplitude step input.}
+\label{fig:closed_small_step}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Plots/closed_large_step.eps}
+\caption{The closed loop transient response to a full-scale amplitude step input.}
+\label{fig:closed_large_step}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+\centering
+\includegraphics[width=4in]{Plots/closed_saw.eps}
+\caption{The closed loop transient response to a full-scale amplitude sawtooth with a frequency of $\frac{f_s}{20}$.}
+\label{fig:closed_saw}
+\end{figure}
+\efloatseparator
+ 
