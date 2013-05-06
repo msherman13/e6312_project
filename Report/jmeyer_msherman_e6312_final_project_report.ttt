@@ -1,15 +1,13 @@
 \begin{table}
 \centering
-\caption{Passive Component Values}
-\label{tab:passive_elements}
-\begin{tabular}{|c|c|}
-\hline Component & Value \\
-\hline Resistors & $\Omega$ \\
-\hline  &  \\
-\hline Capacitors & $F$ \\
-\hline  &  \\
-\hline  &  \\
-\hline  &  \\
+\caption{System Level Transistor Sizes}
+\label{tab:sys_trans_sizes}
+\begin{tabular}{|c|c|c|c|}
+\hline Transistor & Width (nm) & Length (nm) & Aspect Ratio \\
+\hline Switch nMOS & 190 & 180 & 1.055 \\
+\hline Switch pMOS & 190 & 180 & 1.055 \\
+\hline Clock Buffer nMOS & 1020 & 250 & 4.08 \\
+\hline Clock Buffer pMOS & 250 & 250 & 1 \\
 \hline
 \end{tabular}
 \end{table}
@@ -17,17 +15,104 @@
  
 \begin{table}
 \centering
-\caption{Transistor Sizings}
+\caption{Passive Component Values}
+\label{tab:passive_elements}
+\begin{tabular}{|c|c|}
+\hline Component & Value \\
+\hline Resistors & $\Omega$ \\
+\hline R0 & 40M \\
+\hline R1 & 40M \\
+\hline Capacitors & $fF$ \\
+\hline $C_{comp}$ & 750 \\
+\hline $C_{hold}$ & 150 \\
+\hline $C_{samp}$ & 150 \\
+\hline
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
+\begin{table}
+\centering
+%\caption{OTA Transistor Sizes}
 \label{tab:trans_sizes}
 \begin{tabular}{|c|c|c|c|}
-\hline Transistor & Width (m) & Length (m) & Aspect Ratio \\
-\hline  &  &  &  \\
-\hline  &  &  &  \\
-\hline  &  &  &  \\
-\hline  &  &  &  \\
-\hline  &  &  &  \\
-\hline  &  &  &  \\
-\hline  &  &  &  \\
+\hline Transistor & Width (nm) & Length (nm) & Aspect Ratio \\
+\hline M1 & 300 & 8000 & 0.0375 \\
+\hline M2 & 750 & 1000 & 0.75 \\
+\hline M3 & 750 & 1000 & 0.75 \\
+\hline M4a & 281 & 10000 & 0.0281 \\
+\hline M4b & 281 & 10000 & 0.0281 \\
+\hline M4c & 281 & 10000 & 0.0281 \\
+\hline M5a & 281 & 10000 & 0.0281 \\
+\hline M5b & 281 & 10000 & 0.0281 \\
+\hline M5c & 281 & 10000 & 0.0281  \\
+\hline M6 & 250 & 1330 & 0.188 \\
+\hline M7 & 250 & 1330 & 0.188 \\
+\hline M8 & 750 & 1000 & 0.75 \\
+\hline M9 & 750 & 1000 & 0.75 \\
+\hline M10a & 281 & 7500 & 0.0375 \\
+\hline M10b & 281 & 7500 & 0.0375 \\
+\hline M11a & 281 & 7500 & 0.0375  \\
+\hline M11b & 281 & 7500 & 0.0375 \\
+\hline M12 & 500 & 1000 & 0.5 \\
+\hline M13 & 500 & 1000 & 0.5  \\
+\hline M14 & 300 & 4000 & 0.075 \\
+\hline M15 & 300 & 4000 & 0.075  \\
+\hline M16 & 250 & 4000 & 0.0625 \\
+\hline M17 & 250 & 4000 & 0.0625  \\
+\hline M18a & 250 & 6800 & 0.0368 \\
+\hline M18b & 250 & 6800 & 0.0368  \\
+\hline M19a & 250 & 6800 & 0.0368 \\
+\hline M19b & 250 & 6800 & 0.0368 \\
+\hline M20a & 281 & 10000 & 0.0281 \\
+\hline M20b & 281 & 10000 & 0.0281  \\
+\hline M20c & 281 & 10000 & 0.0281  \\
+\hline M21 & 750 & 1000 & 0.75 \\
+\hline M22a & 300 & 8000 & 0.0375 \\
+\hline M22b & 300 & 8000 & 0.0375 \\
+\hline M23 & 300 & 8000 & 0.0375 \\
+\hline M24 & 1500 & 1000 & 1.5 \\
+\hline M25a & 250 & 10000 & 0.025 \\
+\hline M25b & 250 & 10000 & 0.025  \\
+\hline M25c & 250 & 10000 & 0.025 \\
+\hline M25d & 250 & 10000 & 0.025 \\
+\hline M25e & 250 & 10000 & 0.025 \\
+\hline M25f & 250 & 10000 & 0.025 \\
+\hline M26 & 750 & 1000 & 0.75 \\
+\hline M27a & 300 & 8000 & 0.0375 \\
+\hline M27b & 300 & 8000 & 0.0375  \\
+\hline M28 & 250 & 1330 & 0.188 \\
+\hline M29a & 281 & 10000 & 0.0281 \\
+\hline M29b & 281 & 10000 & 0.0281  \\
+\hline M29c & 281 & 10000 & 0.0281 \\
+\hline M29d & 281 & 10000 & 0.0281 \\
+\hline M29e & 281 & 10000 & 0.0281 \\
+\hline M29f & 281 & 10000 & 0.0281 \\
+\hline M30 & 750 & 1000 & 0.75 \\
+\hline M31a & 300 & 8000 & 0.0375 \\
+\hline M31b & 300 & 8000 & 0.0375  \\
+\hline M32a & 250 & 7500 & 0.0333  \\
+\hline M33a & 281 & 10000 & 0.0281 \\
+\hline M33b & 281 & 10000 & 0.0281   \\
+\hline M33c & 281 & 10000 & 0.0281   \\
+\hline M33d & 281 & 10000 & 0.0281   \\
+\hline M33e & 281 & 10000 & 0.0281   \\
+\hline M33f & 281 & 10000 & 0.0281  \\
+\hline M34a & 250 & 7330 & 0.0341 \\
+\hline M34b & 250 & 7330 & 0.0341  \\
+\hline M34c & 250 & 7330 & 0.0341  \\
+\hline M35a & 250 & 7500 & 0.0333 \\
+\hline M35b & 250 & 7500 & 0.0333  \\
+\hline M36a & 281 & 10000 & 0.0281 \\
+\hline M36b & 281 & 10000 & 0.0281 \\
+\hline M36c & 281 & 10000 & 0.0281 \\
+\hline M36d & 281 & 10000 & 0.0281 \\
+\hline M36e & 281 & 10000 & 0.0281 \\
+\hline M36f & 281 & 10000 & 0.0281 \\
+\hline M37 & 300 & 4000 & 0.075 \\
+\hline M38 & 281 & 3750 & 0.0749 \\
+\hline M39a & 281 & 7500 & 0.0375 \\
+\hline M39b & 281 & 7500 & 0.0375 \\
 \hline
 \end{tabular}
 \end{table}
@@ -39,14 +124,14 @@
 \label{tab:specs_results}
 \begin{tabular}{|c|c|c|c|c|}
 \hline Specification & Specification Value & FF Result & TT Result & SS Result\\
-\hline Open Loop OTA DC Gain &  & &  & \\
-\hline Open Loop OTA Phase Margin &  & &  & \\
-\hline Open Loop OTA $3dB$ Bandwidth &  & &  & \\
-\hline Open Loop OTA Unity Gain Bandwidth &  & &  & \\
-\hline Overall Power Consumption &  & &  & \\
-\hline Overall Figure of Merit &  & &  & \\
-\hline Overall Area &  & &  & \\
-\hline  &  & &  & \\
+\hline Open Loop OTA DC Gain & $72.20 dB$ &$102.38 dB$&$110.86 dB$&$112.57 dB$\\
+\hline Open Loop OTA Phase Margin & $60^o$ & $75.4^o$ & $75.2^o$ & $74.3^o$ \\
+\hline Open Loop OTA Unity Gain Bandwidth & $44.10kHz$ & $96.93kHz$ & $87.34 kHz$ &  $68.83 kHz$ \\
+\hline DC Power Consumption & -- & $747.90 nW$ & $769.50 nW$ & $803.16 nW$\\
+\hline Overall Power Consumption & -- & -- & $2.26\mu W$ & --\\
+\hline DC Figure of Merit & -- & -- & $150.3 fJ$ & --\\
+\hline Overall Figure of Merit & -- & -- & $441.4 fJ$ & --\\
+\hline Overall Area & -- & -- & $8.0036 \mu m^2$ & -- \\
 \hline
 \end{tabular}
 \end{table}

@@ -28,7 +28,7 @@ C_min = C_equiv_min/4;
  
  % Settling Constraints
 settle_voltage_error = V_LSB;
-percent_error = 1-(V_FS - settle_voltage_error/2)/(V_FS);
+percent_error = 1-(4*V_FS - settle_voltage_error)/(4*V_FS);
 t_over_tau = -log(percent_error);
 f_s = 5e3;
 T_s = 1/f_s;
@@ -49,14 +49,28 @@ f_unity_req = f_3dB*4;
  C_ox = epsilon_ox/t_ox;
  
  rel_sizing = beta_n/beta_p;
- W_over_L = 190/180; %Minimum for Minimum L
- r_o = 1/((beta_n+beta_p)*(W_over_L)*V_ov);
+ W_over_L = 1.5; %Minimum for Minimum L
+ r_o = 1/(beta_n/2*(W_over_L)*V_ov);
  L = 180e-9;%m
  W_n = W_over_L*L;
  W_p = W_n*rel_sizing;
  
+ % Charge Injection
+ V_Tn = 0.5;%V
+ V_Tp = 0.5;%V
+ V_ov_n = V_DD - V_Tn - V_cm;
+ V_ov_p = -V_Tp + V_cm;
+ 
+ Q_channel_n = -C_ox*W_n*L*V_ov_n;
+ Q_channel_p = C_ox*W_p*L*V_ov_p;
+ 
+ delta_Q = Q_channel_p + Q_channel_n;
+ 
+ % At the end of the phi_S phase
+ %delta_Q_switch_side = 
+ 
  % Bandwidth Calculations from Settling Requirements
- A_f = (V_FS - settle_voltage_error/2)/(V_FS/4);
+ A_f = (V_FS - settle_voltage_error)/(V_FS/4);
  %A_f = (4*V_FS - V_LSB)/V_FS;
  beta_f = 1/4;
  DC_gain = A_f/(1-A_f*beta_f);

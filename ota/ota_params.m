@@ -93,7 +93,7 @@ r_o15 = V_A15/I_13;
 I_o_n = (4.0e-6)/1.5;
 I_o_p = (1.0e-6)/1.5;
 
-IC_strong = 4;
+IC_strong = 2;
 IC_weak = .1;
 
 W_over_L_1 = I_1/(I_o_p*IC_strong);

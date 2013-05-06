@@ -1,37 +1,5 @@
 \begin{figure}
 \centering
-\includegraphics[width=5in]{Schematics/system_level_schem.png}
-\caption{The system level schematic of the switched-capacitor amplifier.}
-\label{fig:system_level_schem}
-\end{figure}
-\efloatseparator
- 
-\begin{figure}
-\centering
-\includegraphics[width=2in]{Schematics/switch.eps}
-\caption{The schematic of the complimentary pass transistors used as switches at the system level.}
-\label{fig:switch_schem}
-\end{figure}
-\efloatseparator
- 
-\begin{figure}
-\centering
-\includegraphics[width=3in]{Schematics/clk_buffer_n.eps}
-\caption{The schematic of the complimentary pass transistors used as switches at the system level.}
-\label{fig:clock_buffer}
-\end{figure}
-\efloatseparator
- 
-\begin{figure}
-\centering
-\includegraphics[width=9in,angle=90]{Schematics/OTA.eps}
-\caption{The transistor level schematic diagram of the OTA.}
-\label{fig:OTA_schem}
-\end{figure}
-\efloatseparator
- 
-\begin{figure}
-\centering
 \includegraphics[width=4in]{Plots/open_dm_gain.eps}
 \caption{The open loop differential gain magnitude response of the OTA.}
 \label{fig:open_dm_gain}
@@ -48,7 +16,7 @@
  
 \begin{figure}
 \centering
-\includegraphics[width=4in]{Plots/cmfb_gain.eps}
+\includegraphics[width=4in]{Plots/open_cm_gain.eps}
 \caption{The open loop common mode gain magnitude response of the OTA.}
 \label{fig:open_cm_gain}
 \end{figure}
@@ -56,7 +24,7 @@
  
 \begin{figure}
 \centering
-\includegraphics[width=4in]{Plots/cmfb_phase.eps}
+\includegraphics[width=4in]{Plots/open_cm_phase.eps}
 \caption{The open loop common mode gain phase response of the OTA.}
 \label{fig:open_cm_phase}
 \end{figure}

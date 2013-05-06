@@ -1,0 +1,54 @@
+\begin{table}
+\centering
+\caption{Passive Component Values}
+\label{tab:passive_elements}
+\begin{tabular}{|c|c|}
+\hline Component & Value \\
+\hline Resistors & $\Omega$ \\
+\hline  &  \\
+\hline Capacitors & $F$ \\
+\hline  &  \\
+\hline  &  \\
+\hline  &  \\
+\hline
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
+\begin{table}
+\centering
+\caption{Transistor Sizings}
+\label{tab:trans_sizes}
+\begin{tabular}{|c|c|c|c|}
+\hline Transistor & Width (m) & Length (m) & Aspect Ratio \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline  &  &  &  \\
+\hline
+\end{tabular}
+\end{table}
+\efloatseparator
+ 
+\begin{table}
+\centering
+\caption{Summary of Specifications and Results}
+\label{tab:specs_results}
+\begin{tabular}{|c|c|c|c|c|}
+\hline Specification & Specification Value & FF Result & TT Result & SS Result\\
+\hline Open Loop OTA DC Gain & $72.20 dB$ &$102.38 dB$&$110.86 dB$&$112.57 dB$\\
+\hline Open Loop OTA Phase Margin & $60^o$ & $75.4^o$ & $75.2^o$ & $74.3^o$ \\
+\hline Open Loop OTA Unity Gain Bandwidth & $44.10kHz$ & $96.93kHz$ & $87.34 kHz$ &  $68.83 kHz$ \\
+\hline DC Power Consumption & -- & $747.90 nW$ & $769.50 nW$ & $803.16 nW$\\
+\hline Overall Power Consumption & -- & -- & $2.26\mu W$ & --\\
+\hline DC Figure of Merit & -- & -- & $150.3 fJ$ & --\\
+\hline Overall Figure of Merit & -- & -- & $441.4 fJ$ & --\\
+\hline Overall Area & -- & -- & $8.0036 \mu m^2$ & -- \\
+\hline
+\end{tabular}
+\end{table}
+\efloatseparator
+ 

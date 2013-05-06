@@ -2,46 +2,73 @@
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}System Level Design}{1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Top Level Schematic}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Sample and Hold Capacitors}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Switches}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Transistor Level OTA Design}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Gain Stage}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Biasing}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Component Values}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Open Loop OTA Results}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Common Mode Feedback Frequency Response}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Open Loop Differential Frequency Response}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Open Loop Common Frequency Mode Response}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Closed Loop Amplifier Results}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Nyquist Rate Sinusoidal Transient Response}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Small Step Transient Response}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Full Scale Step Transient Response}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Sawtooth Transient Response}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-E}}Effective Number of Bits}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-F}}Figure of Merit}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-G}}Area}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Summary of Results}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Possible Improvements}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusion}{1}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Passive Component Values}}{2}}
-\newlabel{tab:passive_elements}{{I}{2}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Transistor Sizings}}{2}}
-\newlabel{tab:trans_sizes}{{II}{2}}
-\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Summary of Specifications and Results}}{2}}
-\newlabel{tab:specs_results}{{III}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The open loop differential gain magnitude response of the OTA.}}{3}}
-\newlabel{fig:open_dm_gain}{{1}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The open loop differential gain phase response of the OTA.}}{3}}
-\newlabel{fig:open_dm_phase}{{2}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The open loop common mode gain magnitude response of the OTA.}}{4}}
-\newlabel{fig:open_cm_gain}{{3}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The open loop common mode gain phase response of the OTA.}}{4}}
-\newlabel{fig:open_cm_phase}{{4}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The closed loop transient response to a full-scale amplitude sinusoid at the Nyquist frequency.}}{5}}
-\newlabel{fig:closed_sine}{{5}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The closed loop transient response to a small amplitude step input.}}{5}}
-\newlabel{fig:closed_small_step}{{6}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The closed loop transient response to a full-scale amplitude step input.}}{6}}
-\newlabel{fig:closed_large_step}{{7}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The closed loop transient response to a full-scale amplitude sawtooth with a frequency of ${\begingroup f_s\endgroup \over 20}$.}}{6}}
-\newlabel{fig:closed_saw}{{8}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Common Mode Voltage}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Full Scale Voltage}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-D}}Least Significant Bit Voltage}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-E}}Sample and Hold Capacitors}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-F}}Switches}{1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-G}}Clocks}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-H}}System Level Component Values}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-I}}OTA Parameters}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Transistor Level OTA Design}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Gain Stage}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Biasing}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Component Values}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Open Loop OTA Results}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Open Loop Differential Frequency Response}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Open Loop Common Frequency Mode Response}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Common Mode Feedback Frequency Response}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Closed Loop Amplifier Results}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Nyquist Rate Sinusoidal Transient Response}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Small Step Transient Response}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Full Scale Step Transient Response}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-D}}Sawtooth Transient Response}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-E}}Effective Number of Bits}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-F}}Figure of Merit}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-G}}Area}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Summary of Results}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Possible Improvements}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusion}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Seminar Responses: Joseph Meyer}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IX-A}}Dr. Deepnarayan Gupta: Superconductor Electronics and Digital-RF Technology}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IX-B}}Dr. Simone Gambini: More than Moore Comes of Age}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IX-C}}Dr. Junhua Shen: The Journey to High Speend and High Resolution SAR ADCs}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {X}Seminar Responses: Miles Sherman}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {X-A}}Simone Gambini: More Than Moore Systems}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {X-B}}Adad Abidi: Armstrong's Circuits \& The Worldwide Spread of Radio}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {X-C}}Shanthi Pavan: Continuous-Time Delta Sigma Data Converters}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces System Level Transistor Sizes}}{6}}
+\newlabel{tab:sys_trans_sizes}{{I}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Passive Component Values}}{6}}
+\newlabel{tab:passive_elements}{{II}{6}}
+\newlabel{tab:trans_sizes}{{\unhbox \voidb@x \hbox {X-C}}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Summary of Specifications and Results}}{8}}
+\newlabel{tab:specs_results}{{III}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The system level schematic of the switched-capacitor amplifier.}}{9}}
+\newlabel{fig:system_level_schem}{{1}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The schematic of the complimentary pass transistors used as switches at the system level.}}{9}}
+\newlabel{fig:switch_schem}{{2}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The schematic of the complimentary pass transistors used as switches at the system level.}}{9}}
+\newlabel{fig:clock_buffer}{{3}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The transistor level schematic diagram of the OTA.}}{10}}
+\newlabel{fig:OTA_schem}{{4}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The open loop differential gain magnitude response of the OTA.}}{11}}
+\newlabel{fig:open_dm_gain}{{5}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The open loop differential gain phase response of the OTA.}}{11}}
+\newlabel{fig:open_dm_phase}{{6}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The open loop common mode gain magnitude response of the OTA.}}{12}}
+\newlabel{fig:open_cm_gain}{{7}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The open loop common mode gain phase response of the OTA.}}{12}}
+\newlabel{fig:open_cm_phase}{{8}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The common mode feedback network gain phase response.}}{13}}
+\newlabel{fig:open_cmfb_gain}{{9}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The common mode feedback network gain magnitude response.}}{13}}
+\newlabel{fig:open_cmfb_phase}{{10}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces The closed loop transient response to a full-scale amplitude sinusoid at the Nyquist frequency.}}{14}}
+\newlabel{fig:closed_sine}{{11}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces The closed loop transient response to a small amplitude step input.}}{14}}
+\newlabel{fig:closed_small_step}{{12}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces The closed loop transient response to a full-scale amplitude step input.}}{15}}
+\newlabel{fig:closed_large_step}{{13}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces The closed loop transient response to a full-scale amplitude sawtooth with a frequency of ${\begingroup f_s\endgroup \over 20}$.}}{15}}
+\newlabel{fig:closed_saw}{{14}{15}}

@@ -97,5 +97,118 @@ close all
 
 load closed_small_step
 
+point1_x = .001199;
+point1_y = .008012;
+point2_x = .002199;
+point2_y = -.008012;
+
 fig_closed_small_step = figure();
-plot(.
+plot(...
+    closed_small_step_input(:,1),closed_small_step_input(:,2),'k',...
+    closed_small_step_output_ss(:,1),closed_small_step_output_ss(:,2),...
+    closed_small_step_output_ff(:,1),closed_small_step_output_ff(:,2),...
+    closed_small_step_output_tt(:,1),closed_small_step_output_tt(:,2),...
+    point1_x,point1_y,'k+',...
+    point2_x,point2_y,'kx',...
+    'LineWidth',2,'MarkerSize',12)
+%xlim{[])
+%ylim([])
+grid
+xlabel('Time (s)','fontsize',14)
+ylabel('Voltage (V)','fontsize',14)
+legend('Input','Output ss','Output ff','Output tt','V_{out}=8.012mV','V_{out}=-8.012mV','Location','NorthWest')
+saveas(fig_closed_small_step,'closed_small_step.eps','epsc')
+
+%% Closed Loop Sine
+clear all
+close all
+
+load closed_sine
+
+point1_x = 0.0003993;
+point1_y = -1.402;
+point2_x = 0.0005993;
+point2_y = 1.402;
+
+fig_closed_sine = figure();
+plot(...
+    closed_sine_input(:,1),closed_sine_input(:,2),'k',...
+    closed_sine_output_ss(:,1),closed_sine_output_ss(:,2),...
+    closed_sine_output_ff(:,1),closed_sine_output_ff(:,2),...
+    closed_sine_output_tt(:,1),closed_sine_output_tt(:,2),...
+    point1_x,point1_y,'k+',...
+    point2_x,point2_y','kx',...
+    'LineWidth',2,'MarkerSize',12)
+grid
+xlim([0,1e-3])
+ylim([-1.75,1.75])
+xlabel('Time (s)','fontsize',14)
+ylabel('Voltage (V)','fontsize',14)
+legend('Input','Output ss','Output ff','Output tt','V_{out}=-1.402V','V_{out}=1.402V','Location','SouthWest')
+saveas(fig_closed_sine,'closed_sine.eps','epsc')
+
+%% Closed Loop saw
+clear all
+close all
+
+load closed_saw
+
+fig_closed_saw = figure();
+plot(...
+    closed_saw_input(:,1),closed_saw_input(:,2),'k',...
+    closed_saw_output_ss(:,1),closed_saw_output_ss(:,2),...
+    closed_saw_output_ff(:,1),closed_saw_output_ff(:,2),...
+    closed_saw_output_tt(:,1),closed_saw_output_tt(:,2),...
+    'LineWidth',2)
+grid
+xlim([0,10e-3])
+ylim([-1.75,1.75])
+xlabel('Time (s)','fontsize',14)
+ylabel('Voltage (V)','fontsize',14)
+legend('Input','Output ss','Output ff','Output tt','Location','NorthWest')
+saveas(fig_closed_saw,'closed_saw.eps','epsc')
+
+%% Closed Loop large_step
+clear all
+close all
+
+load closed_large_step
+
+point1_x = .001199;
+point1_y = 1.403;
+point2_x = .002199;
+point2_y = -1.403;
+
+fig_closed_large_step = figure();
+plot(...
+    closed_large_step_input(:,1),closed_large_step_input(:,2),'k',...
+    closed_large_step_output_ss(:,1),closed_large_step_output_ss(:,2),...
+    closed_large_step_output_ff(:,1),closed_large_step_output_ff(:,2),...
+    closed_large_step_output_tt(:,1),closed_large_step_output_tt(:,2),...
+    point1_x,point1_y,'k+',...
+    point2_x,point2_y','kx',...
+    'LineWidth',2,'Markersize',14)
+grid
+xlim([0,3e-3])
+ylim([-1.75,1.75])
+xlabel('Time (s)','fontsize',14)
+ylabel('Voltage (V)','fontsize',14)
+legend('Input','Output ss','Output ff','Output tt','V_{out}=-1.403V','V_{out}=1.403V','Location','NorthWest')
+saveas(fig_closed_large_step,'closed_large_step.eps','epsc') 
+
+%% Open Loop CMFB
+clear all
+close all
+
+load open_cmfb
+
+fig_cmfb_gain = figure();
+semilogx(...
+    open_cmfb(:,1),open_cmfb(:,2),...
+    'LineWidth',2)
+xlim([1e-3,1e10])
+ylim([-40,5])
+grid
+xlabel('Frequency (Hz)','fontsize',14)
+ylabel('CMFB Loop Gain Magnitude (dB)','fontsize',14)
+s
