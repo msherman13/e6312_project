@@ -1,7 +1,7 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: clk_buffer_n.ps
 %%Creator: XCircuit v3.6 rev168
-%%CreationDate: Sun May  5 20:56:23 2013
+%%CreationDate: Sun May  5 20:59:12 2013
 %%Pages: 1
 %%BoundingBox: 68 68 413 235
 %%DocumentNeededResources: font Helvetica Times-Roman 
@@ -224,10 +224,19 @@ begingate
 endgate
 } def
 
+/generic::dot {
+% trivial
+begingate
+248 1.000 0 0 6 0.000 360.000 xcarc
+1.000 0.000 0.000 scb
+(x) {/Times-Roman cf} 2 29 0 1.000 0 0 pinlabel
+endgate
+} def
+
 
 %%EndSetup
 
-%%Page: 1 1
+%%Page: clk_buffer_n 1
 %%PageOrientation: Portrait
 /pgsave save def bop
 1.0000 inchscale
@@ -263,6 +272,20 @@ endgate
 1 1.000 176 -128 -224 -128 2 polygon
 1.000 0 -48 -128 analog::gnd
 1.000 0 -48 176 analog::vdd
+1.000 0 -224 32 generic::dot
+1.000 0 -336 32 generic::dot
+1.000 0 -128 32 generic::dot
+1.000 0 -16 32 generic::dot
+1.000 0 64 32 generic::dot
+1.000 0 176 32 generic::dot
+1.000 0 -16 -128 generic::dot
+1.000 0 -16 176 generic::dot
+1.000 0 -48 176 generic::dot
+1.000 0 -48 -128 generic::dot
+1.000 0 176 176 generic::dot
+1.000 0 -224 176 generic::dot
+1.000 0 -224 -128 generic::dot
+1.000 0 176 -128 generic::dot
 pgsave restore showpage
 
 %%Trailer
