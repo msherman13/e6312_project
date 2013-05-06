@@ -153,7 +153,11 @@ Our goal in developing a common mode feedback (CMFB) network was to provide circ
 After we verified that we had met our open loop OTA specifications, we replaced the ideal OTA in our system level design with our own OTA design to verify that we still met the system level specifications.
 
 \subsection{Nyquist Rate Sinusoidal Transient Response}
-The first test we ran on our system was a sine wave input at our full-scale amplitude and the Nyquist frequency. As can be seen in our plot (Figure \ref{fig:closed_sine}), our system samples the input at the end of the sample phase to be $0.35V$ ($V_{FS}$). Over the course of the hold phase, the output slews and then settles linearly to a value of $1.402V$. This is within our maximum error value and shows that our circuit successfully handles a sine wave input. 
+The first test we ran on our system was a sine wave input at our full-scale amplitude and the Nyquist frequency. As can be seen in our plot (Figure \ref{fig:closed_sine}), our system samples the input at the end of the sample phase to be $0.35V$ ($V_{FS}$). Over the course of the hold phase, the output slews and then settles linearly to a value of $1.402V$. This is within our maximum error value (shown below) and shows that our circuit successfully handles a sine wave input. The maximum input referred error we can tolerate is
+
+\begin{equation}
+4*\frac{V_{LSB}}{2} = 5.4mV
+\end{equation}
 
 \begin{figure}
 \centering
@@ -208,15 +212,32 @@ FOM_{TOTAL-POWER} = \frac{Power_{total}}{2^{ENOB}f_s} = 441.4 fJ
 \end{equation}
 
 \subsection{Area}
-transistor area
+With the functionality of our system verified and its performance measured, we made an estimation of the area of our design. To measure the area of the transistors in the design, we used the below formula where $L_{diff} = 0.48 \mu m$ and $\alpha = 1.3$.
 
-resistor area
+\begin{equation}
+Area_{transistors} = W*(L+L_{diff})*\alpha = 55.50 pm^2
+\end{equation}
 
-capacitor area
+To calculate the area of the capacitors in our circuit, we used the below formula across all of our capacitors where $C_{unit-area} = 1fF/\mu m^2$.
 
-total area
+\begin{equation}
+Area_{capacitors} = \sum{C/C_{unit-area}} = 3.00 nm^2
+\end{equation}
+
+Finally, to calculate the area of the resistors in our circuit, we used the below formula across all of the resistors in our design where $R_s = 10\Omega / \mu m^2$.
+
+\begin{equation}
+Area_{resistors} = \sum{R/R_s} = 8.00 \mu m^2
+\end{equation}
+
+Adding the above results for area, we came to a total area estimation as shown below.
+
+\begin{equation}
+Area_{total} = 8.0036 \mu m^2
+\end{equation}
 
 \section{Summary of Results}
+As can be gathered from our numerical results, we successfully reached the goal we set out to accomplish. We designed a $10bit$, $5k sample/s$ amplifier for use in a $2.5bit/stage$ pipelined analog-to-digital converter which settles to an input referred error value less than $\frac{V_{LSB}}{2}$. In the process of designing this amplifier, we were able to maintain a very low value of total power consumption and as a result, a very respectable figure of merit. Thanks to a well thought out design process, we built and amplifier that not only meets its specs, but also maintains those specs over all PVT corners. If this design was put onto silicon and distributed to customers, we believe that it would prove to be robust enough to handle constant unpredictable use.
 
 \begin{table}
 \centering
@@ -224,23 +245,25 @@ total area
 \label{tab:specs_results}
 \begin{tabular}{|c|c|c|c|c|}
 \hline Specification & Specification Value & FF Result & TT Result & SS Result\\ 
-\hline Open Loop OTA DC Gain &  &$102.38 dB$&$110.86 dB$&$112.57 dB$\\ 
+\hline Open Loop OTA DC Gain & $72.20 dB$ &$102.38 dB$&$110.86 dB$&$112.57 dB$\\ 
 \hline Open Loop OTA Phase Margin & $60^o$ & $75.4^o$ & $75.2^o$ & $74.3^o$ \\ 
-\hline Open Loop OTA $3dB$ Bandwidth &  & $713.8mHz$ & $242.3 mHz$ & $156.1mHz$\\ 
-\hline Open Loop OTA Unity Gain Bandwidth &  & $96.93kHz$ & $87.34 kHz$ &  $68.83 kHz$ \\ 
-\hline DC Power Consumption &  & $747.90 nW$ & $769.50 nW$ & $803.16 nW$\\ 
-\hline Overall Power Consumption &  &  & $2.26\mu W$ & \\ 
-\hline Overall Figure of Merit &  & &  & \\ 
-\hline Overall Area &  & &  & \\ 
+\hline Open Loop OTA Unity Gain Bandwidth & $44.10kHz$ & $96.93kHz$ & $87.34 kHz$ &  $68.83 kHz$ \\ 
+\hline DC Power Consumption & -- & $747.90 nW$ & $769.50 nW$ & $803.16 nW$\\ 
+\hline Overall Power Consumption & -- & -- & $2.26\mu W$ & --\\ 
+\hline DC Figure of Merit & -- & -- & $150.3 fJ$ & --\\ 
+\hline Overall Figure of Merit & -- & -- & $441.4 fJ$ & --\\ 
+\hline Overall Area & -- & -- & $8.0036 \mu m^2$ & -- \\ 
 \hline 
 \end{tabular} 
 \end{table}
 
 
 \section{Possible Improvements}
+While most of the specifications of our finished amplifier are impressive, one that needs optimization is the total area. Because we originally set out to meet a more stringent specification for gain, we were forced to utilize two $40\Omega$ resistors in the CMFB circuit. These two resistors account for the vast majority of the design's area. Because we ultimately were able to attain a gain far greater than the requirement, in future optimizations of the design we would focus on bringing the value (and hence size) of these resistors down to a more reasonable value. In addition, we believe that with redesign of the OTA, we can achieve a much lower power consumption and utilize much smaller compensation capacitors.
 
 \section{Conclusion}
-
+Through the design of this amplifier, we were able to attain a good deal of knowledge on new circuit techniques as well as design process. Unlike some of our previous designs, we spent a very long time developing our ideas on paper until we were satisfied that they would give us the results we were looking for. Thanks to this patience, once we put our theories into simulation, we were very pleased with the results. We were able to hit our spec after the first iteration of design and we spent most of the remaining design time optimizing for power and accuracy.
+This project is quite appropriate for the class because it allows a broad range of students with different backgrounds to show interest. Because the design requires some knowledge of digital theory in addition to the heavy analog theory, a strong need for collaboration was instilled and led to a much more organic learning environment. 
 
 % references section
 
@@ -268,5 +291,15 @@ total area
 
 %\bibliographystyle{plain}
 %\bibliography{AnalogProjectReferences}
+
+\section{Seminar Responses: Miles Sherman}
+\subsection{Simone Gambini: More Than Moore Systems}
+Dr. Gambini gave an informative and interesting perspective on his work and the industry as a whole. While I was previously aware of a good amount of "More Than Moore" work being done, getting a feel for some specific projects was helpful for my understanding. The one aspect of this seminar that stuck with me was the fact that the noise associated with actually stimulating brain activity is actually larger than the brain's signal poses an interesting problem and a demand for a solution. There is definitely a lot of room for major development in this field.
+
+\subsection{Adad Abidi: Armstrong's Circuits \& The Worldwide Spread of Radio}
+Of the three seminars I attended this semester, I would say this one was the most interesting for me. Dr. Abidi presented the work of Edwin Armstrong in a very specific way so as to motivate a connection between the work of the 1920's and the analog design of today. Armstrong's circuits played a major role in influencing the way we communicate today and it is	clear when his fundamental designs are found in the large systems of analog communication chips in modern day devices. Armstrong's main focus in his work seems to be resourcefulness since vacuum tubes were so expensive. Modern day engineers can learn a lot from his work. Even though transistors are a commodity now, there is always optimization to be done.
+
+\subsection{Shanthi Pavan: Continuous-Time Delta Sigma Data Converters}
+This was the final lecture I attended and I probably had the most trouble following this one due to its more in depth technical discussion of a new topic for me. Dr. Pavan discussed new techniques for the elimination of clock-jitter and non-linearities in delta sigma converters. While I could not follow his exact method of innovation, I was certainly able to learn a good amount about the operation of delta sigma converters. These systems operate by oversampling the input at sampling rates much higher than those at the final output of the system. By doing this, the system can then modulate the noise and push it to higher frequencies than those of interest. The signal is then re-sampled and outputted.
 
 \end{document}
